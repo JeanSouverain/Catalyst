@@ -4,7 +4,8 @@
     "build": "next build",
     "dev": "next dev --turbopack",
     "start": "next start",
-    "test": "jest"
+    "test": "jest",
+    "seed": "tsx scripts/seed-users.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -31,9 +32,11 @@
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
     "@types/supertest": "^7.2.0",
+    "baseline-browser-mapping": "^2.10.7",
     "jest": "^30.3.0",
     "supertest": "^7.2.2",
-    "ts-jest": "^29.4.6"
+    "ts-jest": "^29.4.6",
+    "tsx": "^4.21.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

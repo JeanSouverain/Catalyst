@@ -1,38 +1,45 @@
-"use client";
+import { Card } from '@/app/ui/dashboard/cards';
+import RevenueChart from '@/app/ui/dashboard/revenue-chart';
+import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
+import { lusitana } from '@/app/ui/fonts';
+import { fetchCardData } from '@/app/lib/data';
+import { Suspense } from 'react';
+import {
+  CardSkeleton,
+  CardsSkeleton,
+  LatestInvoicesSkeleton,
+  RevenueChartSkeleton,
+} from '@/app/ui/skeletons';
 
-import React, { useEffect, useState } from 'react';
-
-export default function DashboardPage() {
-  const [stats, setStats] = useState<any>(null);
-
-  useEffect(() => {
-    fetch('/api/dashboard').then(r=>r.json()).then(setStats);
-  }, []);
+export default async function Page() {
+  const {
+    numberOfInvoices,
+    numberOfCustomers,
+    totalPaidInvoices,
+    totalPendingInvoices,
+  } = await fetchCardData();
 
   return (
-    <main className="p-6">
-      <h1 className="mb-4 text-2xl font-semibold">Dashboard</h1>
-      {stats ? (
-        <div className="space-y-4">
-          <div>Estimates created: {stats.estimatesCount}</div>
-          <div>Last estimate: {stats.lastEstimate}</div>
-          <div>Documents uploaded: {stats.docsCount}</div>
-          <button
-            className="mt-4 rounded bg-blue-500 px-4 py-2 text-white"
-            onClick={async () => {
-              const res = await fetch('/api/case-study');
-              const blob = await res.blob();
-              const url = URL.createObjectURL(blob);
-              const a = document.createElement('a');
-              a.href = url;
-              a.download = 'case-study.txt';
-              a.click();
-            }}
-          >Export Case Study</button>
-        </div>
-      ) : (
-        <div>Loading...</div>
-      )}
+    <main>
+      <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
+        Dashboard
+      </h1>
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <Suspense fallback={<CardsSkeleton />}>
+          <Card title="Collected" value={totalPaidInvoices} type="collected" />
+          <Card title="Pending" value={totalPendingInvoices} type="pending" />
+          <Card title="Total Invoices" value={numberOfInvoices} type="invoices" />
+          <Card title="Total Customers" value={numberOfCustomers} type="customers" />
+        </Suspense>
+      </div>
+      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
+        <Suspense fallback={<RevenueChartSkeleton />}>
+          <RevenueChart />
+        </Suspense>
+        <Suspense fallback={<LatestInvoicesSkeleton />}>
+          <LatestInvoices />
+        </Suspense>
+      </div>
     </main>
   );
 }

@@ -9,10 +9,49 @@ This workspace contains a prototype dashboard for a construction-focused AI impl
 - **Dashboard**: overview of estimates, documents, and case study export.
 - **Integrations**: stub connectors for QuickBooks, Procore, Buildertrend.
 
+## Database Setup
+
+1. **Install PostgreSQL**
+   - Download and install PostgreSQL from https://www.postgresql.org/
+   - Or use a cloud service like Vercel Postgres, Neon, or Supabase
+
+2. **Configure Database Connection**
+   - Copy `.env.example` to `.env.local`
+   - Update `POSTGRES_URL` with your PostgreSQL connection string
+   - Example: `postgresql://username:password@localhost:5432/your_database_name`
+
+3. **Create Database Tables**
+   ```bash
+   pnpm seed
+   ```
+
+   This will create the necessary tables and insert sample data.
+
+## Authentication
+
+The app includes a complete authentication system:
+
+- **Login**: `/login` - Sign in with existing account
+- **Registration**: `/register` - Create new account
+- **Protected Routes**: Dashboard requires authentication
+- **Default Admin Account**:
+  - Email: `admin@example.com`
+  - Password: `admin123`
+
+## Features
+
+- **Dashboard**: Overview with key metrics, revenue chart, and latest invoices
+- **Invoices**: View, search, and manage invoices with pagination
+- **Customers**: Customer management with invoice summaries
+- **Job Scheduling**: Basic job scheduler (in development)
+- **Estimator**: PDF processing and cost estimation
+- **Safety Monitoring**: Image analysis for PPE compliance
+
 ## Getting Started
 
 ```bash
 pnpm install
+# Set up database (see Database Setup section)
 pnpm dev
 ```
 
