@@ -2,7 +2,9 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev --turbopack",
+    "dev": "npm run dev:clean",
+    "dev:base": "next dev --turbopack",
+    "dev:clean": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/dev-clean.ps1",
     "start": "next start",
     "test": "jest",
     "seed": "tsx scripts/seed-users.ts"
@@ -15,6 +17,7 @@
     "clsx": "^2.1.1",
     "next": "latest",
     "next-auth": "5.0.0-beta.25",
+    "openai": "^6.27.0",
     "pdf-parse": "^1.1.1",
     "postcss": "8.5.1",
     "postgres": "^3.4.6",

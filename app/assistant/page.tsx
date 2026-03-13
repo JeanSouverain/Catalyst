@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/app/ui/button';
+import FeatureLinks from '@/app/ui/feature-links';
+import CatalystLogo from '@/app/ui/catalyst-logo';
 
 export default function AssistantPage() {
   const [query, setQuery] = useState('');
@@ -36,7 +38,14 @@ export default function AssistantPage() {
 
   return (
     <main className="p-6">
+      <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
+        <CatalystLogo />
+      </div>
+
       <h1 className="mb-4 text-2xl font-semibold">Project Assistant</h1>
+
+      <FeatureLinks />
+
       <div className="mb-4">
         <label className="block mb-2">Upload project document (txt/pdf,image):</label>
         <input type="file" onChange={(e)=>setFile(e.target.files ? e.target.files[0] : null)} />

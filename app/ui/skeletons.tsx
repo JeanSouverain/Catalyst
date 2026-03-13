@@ -216,3 +216,153 @@ export function InvoicesTableSkeleton() {
     </div>
   );
 }
+
+export function CustomersTableSkeleton() {
+  return (
+    <div className="mt-6 flow-root">
+      <div className="overflow-x-auto">
+        <div className="inline-block min-w-full align-middle">
+          <div className="overflow-hidden rounded-md bg-gray-50 p-2 md:pt-0">
+            <div className="md:hidden">
+              <div className="mb-2 w-full rounded-md bg-white p-4">
+                <div className="flex items-center justify-between border-b pb-4">
+                  <div>
+                    <div className="mb-2 flex items-center">
+                      <div className="flex items-center gap-3">
+                        <div className="h-8 w-8 rounded-full bg-gray-100"></div>
+                        <div className="h-6 w-24 rounded bg-gray-100"></div>
+                      </div>
+                    </div>
+                    <div className="h-4 w-32 rounded bg-gray-100"></div>
+                  </div>
+                </div>
+                <div className="flex w-full items-center justify-between border-b py-5">
+                  <div className="flex w-1/2 flex-col">
+                    <div className="h-4 w-12 rounded bg-gray-100"></div>
+                    <div className="mt-2 h-6 w-16 rounded bg-gray-100"></div>
+                  </div>
+                  <div className="flex w-1/2 flex-col">
+                    <div className="h-4 w-12 rounded bg-gray-100"></div>
+                    <div className="mt-2 h-6 w-16 rounded bg-gray-100"></div>
+                  </div>
+                </div>
+                <div className="pt-4">
+                  <div className="h-4 w-20 rounded bg-gray-100"></div>
+                </div>
+              </div>
+              <div className="mb-2 w-full rounded-md bg-white p-4">
+                <div className="flex items-center justify-between border-b pb-4">
+                  <div>
+                    <div className="mb-2 flex items-center">
+                      <div className="flex items-center gap-3">
+                        <div className="h-8 w-8 rounded-full bg-gray-100"></div>
+                        <div className="h-6 w-24 rounded bg-gray-100"></div>
+                      </div>
+                    </div>
+                    <div className="h-4 w-32 rounded bg-gray-100"></div>
+                  </div>
+                </div>
+                <div className="flex w-full items-center justify-between border-b py-5">
+                  <div className="flex w-1/2 flex-col">
+                    <div className="h-4 w-12 rounded bg-gray-100"></div>
+                    <div className="mt-2 h-6 w-16 rounded bg-gray-100"></div>
+                  </div>
+                  <div className="flex w-1/2 flex-col">
+                    <div className="h-4 w-12 rounded bg-gray-100"></div>
+                    <div className="mt-2 h-6 w-16 rounded bg-gray-100"></div>
+                  </div>
+                </div>
+                <div className="pt-4">
+                  <div className="h-4 w-20 rounded bg-gray-100"></div>
+                </div>
+              </div>
+            </div>
+            <table className="hidden min-w-full rounded-md text-gray-900 md:table">
+              <thead className="rounded-md bg-gray-50 text-left text-sm font-normal">
+                <tr>
+                  <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
+                    Name
+                  </th>
+                  <th scope="col" className="px-3 py-5 font-medium">
+                    Email
+                  </th>
+                  <th scope="col" className="px-3 py-5 font-medium">
+                    Total Invoices
+                  </th>
+                  <th scope="col" className="px-3 py-5 font-medium">
+                    Total Pending
+                  </th>
+                  <th scope="col" className="px-4 py-5 font-medium">
+                    Total Paid
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200 text-gray-900">
+                <tr>
+                  <td className="whitespace-nowrap py-4 pl-6 pr-3">
+                    <div className="flex items-center gap-3">
+                      <div className="h-8 w-8 rounded-full bg-gray-100"></div>
+                      <div className="h-6 w-24 rounded bg-gray-100"></div>
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-3 py-4">
+                    <div className="h-6 w-32 rounded bg-gray-100"></div>
+                  </td>
+                  <td className="whitespace-nowrap px-3 py-4">
+                    <div className="h-6 w-16 rounded bg-gray-100"></div>
+                  </td>
+                  <td className="whitespace-nowrap px-3 py-4">
+                    <div className="h-6 w-16 rounded bg-gray-100"></div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-4">
+                    <div className="h-6 w-16 rounded bg-gray-100"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap py-4 pl-6 pr-3">
+                    <div className="flex items-center gap-3">
+                      <div className="h-8 w-8 rounded-full bg-gray-100"></div>
+                      <div className="h-6 w-24 rounded bg-gray-100"></div>
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-3 py-4">
+                    <div className="h-6 w-32 rounded bg-gray-100"></div>
+                  </td>
+                  <td className="whitespace-nowrap px-3 py-4">
+                    <div className="h-6 w-16 rounded bg-gray-100"></div>
+                  </td>
+                  <td className="whitespace-nowrap px-3 py-4">
+                    <div className="h-6 w-16 rounded bg-gray-100"></div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-4">
+                    <div className="h-6 w-16 rounded bg-gray-100"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap py-4 pl-6 pr-3">
+                    <div className="flex items-center gap-3">
+                      <div className="h-8 w-8 rounded-full bg-gray-100"></div>
+                      <div className="h-6 w-24 rounded bg-gray-100"></div>
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-3 py-4">
+                    <div className="h-6 w-32 rounded bg-gray-100"></div>
+                  </td>
+                  <td className="whitespace-nowrap px-3 py-4">
+                    <div className="h-6 w-16 rounded bg-gray-100"></div>
+                  </td>
+                  <td className="whitespace-nowrap px-3 py-4">
+                    <div className="h-6 w-16 rounded bg-gray-100"></div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-4">
+                    <div className="h-6 w-16 rounded bg-gray-100"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/app/ui/button';
+import FeatureLinks from '@/app/ui/feature-links';
+import CatalystLogo from '@/app/ui/catalyst-logo';
 
 export default function EstimatorPage() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -36,7 +38,13 @@ export default function EstimatorPage() {
 
   return (
     <main className="p-6">
+      <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
+        <CatalystLogo />
+      </div>
+
       <h1 className="mb-4 text-2xl font-semibold">Estimator (Pilot)</h1>
+
+      <FeatureLinks />
 
       <section className="mb-6 rounded-lg bg-gray-50 p-6">
         <label className="mb-2 block text-sm font-medium text-gray-700">Upload blueprint or measurements</label>

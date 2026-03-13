@@ -4,6 +4,7 @@ import { signIn } from '@/app/lib/auth';
 import { AuthError } from 'next-auth';
 import { redirect } from 'next/navigation';
 import bcrypt from 'bcrypt';
+import { getUser, createUser } from '@/app/lib/user-db';
 // Fallback users storage for development
 let fallbackUsers: Array<{
   id: string;

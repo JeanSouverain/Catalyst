@@ -31,14 +31,6 @@ export default function Page() {
             <span>Log in</span>
             <ArrowRightIcon className="w-5 md:w-6" />
           </Link>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <Link href="/estimator" className="rounded-lg bg-green-500 px-4 py-2 text-sm text-white">Estimator</Link>
-            <Link href="/assistant" className="rounded-lg bg-indigo-500 px-4 py-2 text-sm text-white">Assistant</Link>
-            <Link href="/scheduler" className="rounded-lg bg-yellow-500 px-4 py-2 text-sm text-white">Scheduler</Link>
-            <Link href="/dashboard" className="rounded-lg bg-sky-500 px-4 py-2 text-sm text-white">Dashboard</Link>
-            <Link href="/safety" className="rounded-lg bg-red-500 px-4 py-2 text-sm text-white">Safety</Link>
-            <Link href="/integrations" className="rounded-lg bg-purple-500 px-4 py-2 text-sm text-white">Integrations</Link>
-          </div>
         </div>
 
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
